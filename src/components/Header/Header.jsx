@@ -1,4 +1,4 @@
-import { Box, Button, Container, IconButton, Stack } from "@mui/material";
+import { Button, Container, IconButton, Stack } from "@mui/material";
 import logoImg from "../../assets/logo.png";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { FlexBox } from "../styled/FlexBox";
@@ -6,19 +6,23 @@ import { FlexBox } from "../styled/FlexBox";
 const Header = () => {
   return (
     <div>
-      <Container maxWidth="lg">
-        <FlexBox justifyContent='space-between'>
+      <Container>
+        <FlexBox justifyContent='space-between' sx={{
+          padding: '1rem 0'
+        }}>
           <img
             src={logoImg}
             alt="Tasty Tales Logo"
             style={{ width: "160px" }}
           />
 
-          <Stack direction='row' spacing={4}>
+          <Stack direction='row' spacing={4} sx={{
+            alignItems: 'center'
+          }}>
             <IconButton>
               <ShoppingCartOutlinedIcon />
             </IconButton>
-            <Button>Sign In</Button>
+            <Button variant="text">Login</Button>
             <Button>Sign Up</Button>
           </Stack>
         </FlexBox>

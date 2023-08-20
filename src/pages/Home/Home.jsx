@@ -1,9 +1,10 @@
+import BannerSection from "../../components/BannerSection/BannerSection";
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+        <>
+            <BannerSection/>
+        </>
     );
 };
 

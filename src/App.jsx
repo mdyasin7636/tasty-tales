@@ -1,8 +1,9 @@
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home/Home";
+import { theme } from "./theme/theme";
 
 const router = createBrowserRouter([
   {
@@ -11,18 +12,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
-      }
-    ]
+        element: <Home></Home>,
+      },
+    ],
   },
 ]);
 
 const App = () => {
   return (
-    <div>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <CssBaseline />
+        <RouterProvider router={router} />
+      </div>
+    </ThemeProvider>
   );
 };
 
