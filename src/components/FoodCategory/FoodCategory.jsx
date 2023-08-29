@@ -5,7 +5,10 @@ const FoodCategory = () => {
     return (
         <Box>
             <Container>
-                <Box>
+                <Box sx={{
+                    maxWidth: 500,
+                    mx: 'auto'
+                }}>
                     <TabButtons></TabButtons>
                 </Box>
             </Container>
