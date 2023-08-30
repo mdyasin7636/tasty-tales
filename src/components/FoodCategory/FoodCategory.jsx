@@ -1,7 +1,11 @@
 import { Box, Container } from "@mui/material";
 import TabButtons from "../Custom/TabButtons";
+import React from "react";
 
 const FoodCategory = () => {
+
+    const [value, setValue] = React.useState(0);
+    console.log(value);
     return (
         <Box>
             <Container>
@@ -9,7 +13,7 @@ const FoodCategory = () => {
                     maxWidth: 500,
                     mx: 'auto'
                 }}>
-                    <TabButtons></TabButtons>
+                    <TabButtons value={value} setValue={setValue}></TabButtons>
                 </Box>
             </Container>
         </Box>
